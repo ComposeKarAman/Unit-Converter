@@ -163,13 +163,15 @@ fun UnitConverter() {
 
         Button(onClick = {
             submitCheck = true
-            Toast.makeText( context, "Please Wait", Toast.LENGTH_SHORT ).show()
             calculation()
-                         },
-            modifier = Modifier.padding(26.dp)) {
+        },
+            Modifier.padding(26.dp)) {
             Text("CONVERT")
         }
+        if (ipUnit == "SELECT" || opUnit == "SELECT") {
+            Toast.makeText(context, "Please select units", Toast.LENGTH_SHORT).show()
 
+        } else
         if (submitCheck) {
 
             Text(
