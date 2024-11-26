@@ -85,7 +85,7 @@ fun UnitConverter() {
     ) {
         Text("UNIT CONVERTOR", style = MaterialTheme.typography.headlineLarge)
 
-        Spacer(modifier = Modifier.height(32.dp))
+        Spacer(Modifier.height(32.dp))
 
         OutlinedTextField(
             inputValue,
@@ -162,23 +162,22 @@ fun UnitConverter() {
             }
 
         Button(onClick = {
-            submitCheck = true
-            calculation()
+            if (ipUnit == "SELECT" || opUnit == "SELECT") {
+                Toast.makeText(context, "Please select units", Toast.LENGTH_SHORT).show()
+            } else {
+                submitCheck = true
+                calculation()
+            }
         },
             Modifier.padding(26.dp)) {
             Text("CONVERT")
         }
-        if (ipUnit == "SELECT" || opUnit == "SELECT") {
-            Toast.makeText(context, "Please select units", Toast.LENGTH_SHORT).show()
-
-        } else
         if (submitCheck) {
-
             Text(
                 "Result: $outputValue $opUnit",
                 style = MaterialTheme.typography.headlineMedium,
                 fontFamily = FontFamily.Monospace,
-                color = Color.Blue
+                color = Color.Gray
             )
         }
     }
