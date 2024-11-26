@@ -169,8 +169,9 @@ fun UnitConverter() {
             modifier = Modifier.padding(26.dp)) {
             Text("CONVERT")
         }
-
-        if (submitCheck) {
+if(opUnit == "SELECT" || ipUnit == "SELECT" ){
+Text("")
+} else if (submitCheck) {
 
             Text(
                 "Result: $outputValue $opUnit",
