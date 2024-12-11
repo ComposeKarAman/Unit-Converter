@@ -130,7 +130,7 @@ fun UnitConverter() {
                 Spacer(Modifier.width(40.dp))
 
                 Box {
-                    Spacer(Modifier.height(15.dp))
+                    Spacer(Modifier.height(16.dp))
                     Button({ opExpanded = true }) {
                         Text(opUnit)
                         Icon(Icons.Default.ArrowDropDown, contentDescription = "")
