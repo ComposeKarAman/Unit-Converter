@@ -176,6 +176,7 @@ fun UnitConverter() {
             Text(
                 "Result: $outputValue $opUnit",
                 style = MaterialTheme.typography.headlineMedium,
+                modifier = Modifier.padding(16.dp),
                 fontFamily = FontFamily.Monospace,
                 color = Color.Gray
             )
